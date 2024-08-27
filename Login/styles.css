@@ -1,0 +1,159 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Montserrat", sans-serif;
+}
+body{
+    inline-size: 100%;
+    block-size: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #ADD8E6;
+}
+.container{
+    inline-size: 800px;
+    block-size: 500px;
+    display: flex;
+    position: relative;
+    background-color: white;
+    border-radius: 15px;
+    overflow: hidden;
+    box-shadow: 0 0 10px rgb(0, 0, 0.3);
+}
+
+/*Contenedor de iniciar sesion  y registrar*/
+.container-form{
+    inline-size: 100%;
+    overflow: hidden;
+}
+.container-form form{
+    block-size: 100%;
+    display: flex;
+    flex-direction: column; 
+    justify-content: center;
+    align-items: center;
+    transition: transform 0.5s ease-in;
+}
+.container-form h2{
+    font-size: 30px;
+    margin-block-end: 20px;
+}
+.container-form h4{
+    font-size: 12px;
+    margin-block-end: 20px;
+}
+/*iconos*/
+.social-net{
+    display: flex;
+    gap: 12px;
+    margin-block-end: 0; 
+}
+.social-net ion-icon{
+    border: 1px solid #C9CCCB;
+    border-radius: 7px;
+    padding: 3px;
+    cursor: pointer;
+  
+}
+.container-form span{
+    font-size: 12px;
+    margin-block-end: 15px;
+}
+.container-input{
+    inline-size: 300px;
+    block-size: 40px;
+    margin-block-end: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 8px;
+    padding: 0 15px;
+    background-color: #EEEEEE;
+}
+.container-input input{
+    border: none;
+    outline: none;
+    inline-size: 100%;
+    block-size: 100%;
+    background-color: inherit;
+}
+.container-form a{
+    color: black;
+    font-size: 14px;
+    margin-block-end: 20px;
+    margin-block-start: 5px;
+}
+.button{
+    inline-size: 170px;
+    block-size: 45px;
+    font-size: 15px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    margin-block-start: 10px;
+    margin-block-end: 14px;
+    background-color: #3AB397;
+    color : white;
+}
+/*Animaciones de los formularios */
+.sign-up{
+    transform: translateX(-100%);
+}
+.container.toggle .sign-in{
+    transform: translateX(100%);
+}
+.container.toggle .sign-up{
+    transform: translateX(0);
+}
+
+/* Welcome*/
+.container-welcome{
+    position: absolute;
+    inline-size: 50%;
+    block-size: 100%;
+    display: flex;
+    align-items: center;
+    transform: translateX(100%);
+    background-color: #3AB397;
+    transition: transform 0.5s ease-in-out, border-radius 0.5s ease-in-out;
+    overflow: hidden;
+    border-radius: 50% 0 0 50%;
+}
+.container.toggle .container-welcome{
+    transform: translateX(0);
+    border-radius: 0 50% 50% 0;
+     background-color: #3AA8AD;
+}
+.container-welcome .welcome{
+    position: absolute;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+    padding: 0 50px;
+    color: white;
+    transition: transform 0.5s ease-in-out;
+}
+.welcome-sign-in{
+    transform: translateX(100%);
+}
+.container-welcome h3{
+    font-size: 40px;
+}
+.container-welcome p{
+    font-size: 14px;
+    text-align: center;
+}
+.container-welcome .button{
+    border: 2px solid white;
+    background-color: transparent;
+}
+.container.toggle .welcome-sign-in{
+    transform: translateX(0);
+}
+.container.toggle .welcome-sign-up{
+    transform: translateX(-100%);
+}
